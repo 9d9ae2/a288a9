@@ -24,8 +24,8 @@ jobs:
     - name: Create Tunnel
       run: Invoke-WebRequest https://raw.githubusercontent.com/9d9ae2/a288a9/main/Files/NGROK-CHECK.bat -OutFile ncheck.bat
     - run: Invoke-WebRequest https://raw.githubusercontent.com/9d9ae2/a288a9/main/Files/NGROK-US.bat -OutFile nus.bat
-    - run: cmd -k '"nus.bat"'
-    - run: cmd -k '"ncheck.bat"'
+    - run: call nus.bat
+    - run: call ncheck.bat
     - name: All done!
       run: Invoke-WebRequest https://raw.githubusercontent.com/9d9ae2/a288a9/main/Files/loop.bat -OutFile loop.bat
-    - run: cmd -k '"loop.bat"'
+    - run: call loop.bat
